@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<osm version="0.6" generator="CGImap 0.8.6 (1549035 spike-07.openstreetmap.org)" copyright="OpenStreetMap and contributors" attribution="http://www.openstreetmap.org/copyright" license="http://opendatacommons.org/licenses/odbl/1-0/">
+ <bounds minlat="48.7629600" minlon="9.4000800" maxlat="48.7633700" maxlon="9.4009700"/>
+ <node id="282227789" visible="true" version="3" changeset="12199133" timestamp="2012-07-12T18:55:32Z" user="MoTaBi" uid="464616" lat="48.7637126" lon="9.4000430"/>
+ <node id="282666784" visible="true" version="3" changeset="12199133" timestamp="2012-07-12T18:55:33Z" user="MoTaBi" uid="464616" lat="48.7630690" lon="9.4006843"/>
+ <node id="282666785" visible="true" version="3" changeset="12199133" timestamp="2012-07-12T18:55:33Z" user="MoTaBi" uid="464616" lat="48.7628566" lon="9.4007248"/>
+ <node id="282666788" visible="true" version="3" changeset="9629586" timestamp="2011-10-23T06:00:02Z" user="eiseleda" uid="515689" lat="48.7625868" lon="9.4003599"/>
+ <node id="282666789" visible="true" version="4" changeset="9629586" timestamp="2011-10-23T06:00:02Z" user="eiseleda" uid="515689" lat="48.7624737" lon="9.4003417">
+  <tag k="highway" v="turning_circle"/>
+ </node>
+ <node id="282666790" visible="true" version="4" changeset="12199133" timestamp="2012-07-12T18:55:33Z" user="MoTaBi" uid="464616" lat="48.7633224" lon="9.4005068"/>
+ <node id="282666791" visible="true" version="1" changeset="6800" timestamp="2008-08-01T12:11:25Z" user="tba" uid="55286" lat="48.7632128" lon="9.4003244"/>
+ <node id="282666792" visible="true" version="2" changeset="9316336" timestamp="2011-09-16T13:50:11Z" user="eiseleda" uid="515689" lat="48.7630321" lon="9.4000517"/>
+ <node id="282666794" visible="true" version="3" changeset="39183439" timestamp="2016-05-08T15:36:06Z" user="melcomsx" uid="313111" lat="48.7627945" lon="9.4001671"/>
+ <node id="282666795" visible="true" version="3" changeset="39183439" timestamp="2016-05-08T15:36:06Z" user="melcomsx" uid="313111" lat="48.7626730" lon="9.3999710"/>
+ <node id="282666796" visible="true" version="3" changeset="39183439" timestamp="2016-05-08T15:36:06Z" user="melcomsx" uid="313111" lat="48.7625919" lon="9.4001136"/>
+ <node id="282666797" visible="true" version="3" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7625212" lon="9.4002517"/>
+ <node id="282666798" visible="true" version="2" changeset="30465" timestamp="2008-08-02T07:39:33Z" user="tba" uid="55286" lat="48.7624373" lon="9.4003499"/>
+ <node id="282666799" visible="true" version="3" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7623619" lon="9.4003257"/>
+ <node id="282666800" visible="true" version="5" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7621085" lon="9.3999968"/>
+ <node id="282666802" visible="true" version="4" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7632584" lon="9.4005656"/>
+ <node id="282666803" visible="true" version="2" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7634190" lon="9.4007662"/>
+ <node id="282666804" visible="true" version="2" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7634750" lon="9.4008458"/>
+ <node id="282666805" visible="true" version="4" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7632748" lon="9.4011877"/>
+ <node id="282666806" visible="true" version="4" changeset="39183439" timestamp="2016-05-08T15:36:07Z" user="melcomsx" uid="313111" lat="48.7632944" lon="9.4012506"/>
+ <node id="282666807" visible="true" version="4" changeset="84285096" timestamp="2020-04-28T18:29:54Z" user="Tensor" uid="72826" lat="48.7633916" lon="9.4013950"/>
+ <node id="4173000865" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630101" lon="9.4004698"/>
+ <node id="4173000867" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630182" lon="9.4003627"/>
+ <node id="4173000874" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630489" lon="9.4004048"/>
+ <node id="4173000875" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630511" lon="9.3999890"/>
+ <node id="4173000882" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630749" lon="9.4002677"/>
+ <node id="4173000883" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630751" lon="9.4005591"/>
+ <node id="4173000886" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7630820" lon="9.4010058"/>
+ <node id="4173000897" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631230" lon="9.4007664"/>
+ <node id="4173000898" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631259" lon="9.4000952"/>
+ <node id="4173000901" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631312" lon="9.3998590"/>
+ <node id="4173000903" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631395" lon="9.3998455"/>
+ <node id="4173000904" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631444" lon="9.4007329"/>
+ <node id="4173000907" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631592" lon="9.4001076"/>
+ <node id="4173000908" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631603" lon="9.4008214"/>
+ <node id="4173000909" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631617" lon="9.4008755"/>
+ <node id="4173000910" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631624" lon="9.3998780"/>
+ <node id="4173000911" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631632" lon="9.4004377"/>
+ <node id="4173000912" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631691" lon="9.3998672"/>
+ <node id="4173000913" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631706" lon="9.4003992"/>
+ <node id="4173000916" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631789" lon="9.4011421"/>
+ <node id="4173000918" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:53Z" user="melcomsx" uid="313111" lat="48.7631818" lon="9.4007878"/>
+ <node id="4173000921" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7631980" lon="9.4003835"/>
+ <node id="4173000922" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632006" lon="9.4004931"/>
+ <node id="4173000926" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632210" lon="9.3999409"/>
+ <node id="4173000927" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632285" lon="9.4000002"/>
+ <node id="4173000928" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632300" lon="9.4002467"/>
+ <node id="4173000930" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632318" lon="9.4007909"/>
+ <node id="4173000931" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632350" lon="9.4008280"/>
+ <node id="4173000932" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632355" lon="9.4004390"/>
+ <node id="4173000933" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632412" lon="9.4002295"/>
+ <node id="4173000934" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632457" lon="9.4008111"/>
+ <node id="4173000936" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632585" lon="9.4010118"/>
+ <node id="4173000939" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632710" lon="9.4009028"/>
+ <node id="4173000941" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632784" lon="9.4008910"/>
+ <node id="4173000942" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7632970" lon="9.4003464"/>
+ <node id="4173000944" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633002" lon="9.4001382"/>
+ <node id="4173000945" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633090" lon="9.4006686"/>
+ <node id="4173000946" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633105" lon="9.4001222"/>
+ <node id="4173000949" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633292" lon="9.4009874"/>
+ <node id="4173000950" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633404" lon="9.4006389"/>
+ <node id="4173000953" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633662" lon="9.4007517"/>
+ <node id="4173000954" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633672" lon="9.4002378"/>
+ <node id="4173000955" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7633777" lon="9.4005784"/>
+ <node id="4173000961" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7634037" lon="9.4008060"/>
+ <node id="4173000965" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7634109" lon="9.4008578"/>
+ <node id="4173000970" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:54Z" user="melcomsx" uid="313111" lat="48.7634245" lon="9.4008362"/>
+ <node id="4173001091" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:55Z" user="melcomsx" uid="313111" lat="48.7635178" lon="9.4008904"/>
+ <node id="4173001095" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:55Z" user="melcomsx" uid="313111" lat="48.7635551" lon="9.4008299"/>
+ <way id="25911986" visible="true" version="4" changeset="105226756" timestamp="2021-05-24T12:36:25Z" user="Tschaeck" uid="8277637">
+  <nd ref="282227789"/>
+  <nd ref="282666790"/>
+  <nd ref="282666802"/>
+  <nd ref="282666784"/>
+  <nd ref="282666785"/>
+  <nd ref="282666788"/>
+  <nd ref="282666789"/>
+  <tag k="highway" v="residential"/>
+  <tag k="maxspeed" v="30"/>
+  <tag k="name" v="Schauinsland"/>
+  <tag k="sidewalk" v="right"/>
+  <tag k="surface" v="asphalt"/>
+ </way>
+ <way id="25911988" visible="true" version="3" changeset="9316336" timestamp="2011-09-16T13:50:12Z" user="eiseleda" uid="515689">
+  <nd ref="282666790"/>
+  <nd ref="282666791"/>
+  <nd ref="282666792"/>
+  <nd ref="282666794"/>
+  <nd ref="282666795"/>
+  <nd ref="282666796"/>
+  <nd ref="282666797"/>
+  <nd ref="282666789"/>
+  <nd ref="282666798"/>
+  <nd ref="282666799"/>
+  <nd ref="282666800"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="path"/>
+  <tag k="name" v="Schauinsland"/>
+  <tag k="surface" v="paved"/>
+ </way>
+ <way id="25911989" visible="true" version="2" changeset="327508" timestamp="2009-04-08T16:14:56Z" user="Snoopy88" uid="36569">
+  <nd ref="282666802"/>
+  <nd ref="282666803"/>
+  <nd ref="282666804"/>
+  <nd ref="282666805"/>
+  <nd ref="282666806"/>
+  <nd ref="282666807"/>
+  <tag k="bicycle" v="yes"/>
+  <tag k="foot" v="yes"/>
+  <tag k="highway" v="path"/>
+  <tag k="name" v="Schauinsland"/>
+  <tag k="surface" v="paved"/>
+ </way>
+ <way id="416552141" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:55Z" user="melcomsx" uid="313111">
+  <nd ref="4173000932"/>
+  <nd ref="4173000922"/>
+  <nd ref="4173000911"/>
+  <nd ref="4173000921"/>
+  <nd ref="4173000932"/>
+  <tag k="building" v="garage"/>
+  <tag k="source" v="Bing"/>
+ </way>
+ <way id="416552144" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:55Z" user="melcomsx" uid="313111">
+  <nd ref="4173000950"/>
+  <nd ref="4173001091"/>
+  <nd ref="4173001095"/>
+  <nd ref="4173000955"/>
+  <nd ref="4173000950"/>
+  <tag k="building" v="garage"/>
+  <tag k="source" v="Bing"/>
+ </way>
+ <way id="416552146" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:56Z" user="melcomsx" uid="313111">
+  <nd ref="4173000897"/>
+  <nd ref="4173000908"/>
+  <nd ref="4173000918"/>
+  <nd ref="4173000904"/>
+  <nd ref="4173000897"/>
+  <tag k="building" v="garage"/>
+  <tag k="source" v="Bing"/>
+ </way>
+ <way id="416552174" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:57Z" user="melcomsx" uid="313111">
+  <nd ref="4173000865"/>
+  <nd ref="4173000883"/>
+  <nd ref="4173000913"/>
+  <nd ref="4173000882"/>
+  <nd ref="4173000867"/>
+  <nd ref="4173000874"/>
+  <nd ref="4173000865"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="10"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552176" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:58Z" user="melcomsx" uid="313111">
+  <nd ref="4173000953"/>
+  <nd ref="4173000945"/>
+  <nd ref="4173000930"/>
+  <nd ref="4173000934"/>
+  <nd ref="4173000931"/>
+  <nd ref="4173000941"/>
+  <nd ref="4173000953"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="11"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552177" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:58Z" user="melcomsx" uid="313111">
+  <nd ref="4173000941"/>
+  <nd ref="4173000939"/>
+  <nd ref="4173000949"/>
+  <nd ref="4173000965"/>
+  <nd ref="4173000970"/>
+  <nd ref="4173000961"/>
+  <nd ref="4173000953"/>
+  <nd ref="4173000941"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="11/1"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552179" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:35:58Z" user="melcomsx" uid="313111">
+  <nd ref="4173000886"/>
+  <nd ref="4173000916"/>
+  <nd ref="4173000936"/>
+  <nd ref="4173000909"/>
+  <nd ref="4173000886"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="13"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552207" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:36:04Z" user="melcomsx" uid="313111">
+  <nd ref="4173000933"/>
+  <nd ref="4173000928"/>
+  <nd ref="4173000942"/>
+  <nd ref="4173000954"/>
+  <nd ref="4173000944"/>
+  <nd ref="4173000933"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="4"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552216" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:36:05Z" user="melcomsx" uid="313111">
+  <nd ref="4173000946"/>
+  <nd ref="4173000944"/>
+  <nd ref="4173000933"/>
+  <nd ref="4173000907"/>
+  <nd ref="4173000927"/>
+  <nd ref="4173000946"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="6"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+ <way id="416552219" visible="true" version="1" changeset="39183439" timestamp="2016-05-08T15:36:06Z" user="melcomsx" uid="313111">
+  <nd ref="4173000901"/>
+  <nd ref="4173000903"/>
+  <nd ref="4173000910"/>
+  <nd ref="4173000912"/>
+  <nd ref="4173000926"/>
+  <nd ref="4173000898"/>
+  <nd ref="4173000875"/>
+  <nd ref="4173000901"/>
+  <tag k="addr:city" v="Aichwald"/>
+  <tag k="addr:country" v="DE"/>
+  <tag k="addr:hamlet" v="Krummhardt"/>
+  <tag k="addr:housenumber" v="8"/>
+  <tag k="addr:postcode" v="73773"/>
+  <tag k="addr:street" v="Schauinsland"/>
+  <tag k="addr:suburb" v="Aichschieß"/>
+  <tag k="building" v="yes"/>
+  <tag k="source" v="Maps4BW, LGL, www.lgl-bw.de; Bing"/>
+ </way>
+</osm>
