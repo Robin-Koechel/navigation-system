@@ -5,7 +5,7 @@ from matplotlib import image
 from matplotlib import pyplot as plt
 test = open('einlesen.txt', 'r')
 line = test.read()
-patternX  = re.compile(r'lon="(\d\.\d{7})"')
+patternX = re.compile(r'lon="(\d\.\d{7})"')
 matchesX = patternX.finditer(line)
 
 
@@ -21,7 +21,7 @@ for match in matchesX:
     x[i] = match.group(1)
     i += 1
 i = 0
-patternY  = re.compile(r'lat="(\d\d\.\d{7})"')
+patternY = re.compile(r'lat="(\d\d\.\d{7})"')
 matchesY = patternY.finditer(line)
 for match in matchesY:
     print(match.group(1))
