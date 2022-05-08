@@ -16,13 +16,14 @@ b_node = bs_data.find_all('node')
 
 lst_coordinates = []
 
-min_lat = float(b_bound.get('minlat')) * 10000000
-min_lon = float(b_bound.get('minlon')) * 10000000
-
+min_lat = float(b_bound.get('minlat'))
+min_lon = float(b_bound.get('minlon'))
+max_lat = float(b_bound.get('maxlat'))
+max_lon = float(b_bound.get('maxlon'))
 
 for n in b_node:
-    lat = float(n.get('lat')) * 10000000
-    lon = float(n.get('lon')) * 10000000
+    lat = float(n.get('lat'))
+    lon = float(n.get('lon'))
     lst_coordinates.append([lat, lon])
 
 
@@ -41,7 +42,7 @@ for c in lst_coordinates:
     y = y - min_y
     z = z - min_z
 
-    plt.plot(x/1250, y/738, 'ro')
+    #plt.plot(x/1250, y/738, 'ro')
 
 plt.imshow(background_img)
 plt.show()
