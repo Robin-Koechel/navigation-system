@@ -2,6 +2,7 @@ from bs4 import BeautifulSoup as bs # parsing the data
 from matplotlib import pyplot as plt
 from matplotlib import image
 import math
+import numpy as np
 
 background_img = image.imread('img_gerlingen.png')
 
@@ -16,33 +17,41 @@ b_node = bs_data.find_all('node')
 
 lst_coordinates = []
 
-min_lat = float(b_bound.get('minlat'))
-min_lon = float(b_bound.get('minlon'))
-max_lat = float(b_bound.get('maxlat'))
-max_lon = float(b_bound.get('maxlon'))
-
 for n in b_node:
     lat = float(n.get('lat'))
     lon = float(n.get('lon'))
     lst_coordinates.append([lat, lon])
 
 
-min_x = R * math.cos(min_lat) * math.cos(min_lon)
-min_y = R * math.cos(min_lat) * math.sin(min_lon)
-min_z = R * math.sin(min_lat)
-
-
+x_data=[]
+y_data=[]
+z_data=[]
 for c in lst_coordinates:
-    x = R * math.cos(c[0]) * math.cos(c[1])
-    y = R * math.cos(c[0]) * math.sin(c[1])
-    z = R * math.sin(c[0])
-    print(x, y, z)
+    x = R * math.cos(c[0]) * math.sin(c[1])
+    y = R * math.sin(c[0]) * math.sin(c[1])
+    z = R * math.cos(c[0])
 
-    x = x - min_x
-    y = y - min_y
-    z = z - min_z
+    x_data.append(x)
+    y_data.append(y)
+    z_data.append(z)
 
-    #plt.plot(x/1250, y/738, 'ro')
 
-plt.imshow(background_img)
+def plot_3d_sphere():
+    ax = plt.axes(projection='3d')
+    #ax.set_aspect("auto")
+
+    # generates the values of every line
+    lat, lon = np.mgrid[0:2 * np.pi:15j, 0:np.pi:15j] # https://numpy.org/doc/stable/reference/generated/numpy.mgrid.html
+
+    # convert lan & lon to x, y,z
+    x = np.cos(lat) * np.sin(lon) * R
+    y = np.sin(lat) * np.sin(lon) * R
+    z = np.cos(lon) * R
+
+    #ax.plot_surface(x, y, z, cmap='plasma')
+    ax.plot_wireframe(x, y, z, color='k')
+    ax.scatter3D(x_data, y_data, z_data, color="r")
+
+plot_3d_sphere()
+
 plt.show()
