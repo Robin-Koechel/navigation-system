@@ -35,7 +35,7 @@ columm_values = ['lat', 'lon']
 df = pd.DataFrame(data = lst_coordinates, columns=columm_values)
 BBox = (min_lon,  max_lon,
          min_lat, max_lat)
-ax.scatter(df.lon, df.lat, zorder=1, alpha= 0.65, c='b', s=10)
+ax.scatter(df.lon, df.lat, zorder=1, alpha= 0.65, c='r', s=10)
 ax.set_title('Plotting Spatial Data on Riyadh Map')
 ax.set_xlim(BBox[0],BBox[1])
 ax.set_ylim(BBox[2],BBox[3])
