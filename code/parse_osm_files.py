@@ -13,13 +13,25 @@ class osm_parser():
             self.data = f.read()
             self.bs_data = bs(self.data, 'xml')
 
+    def get_Lat_Lon_Box(self):
+        b_bound = self.bs_data.find('bounds')
+        min_lat = float(b_bound.get('minlat'))
+        min_lon = float(b_bound.get('minlon'))
+        max_lat = float(b_bound.get('maxlat'))
+        max_lon = float(b_bound.get('maxlon'))
+        BBox = (min_lon, max_lon,
+                min_lat, max_lat)
+        return BBox
+
+
+
     def get_node_lat_lon(self, node_id):
         nodes = self.bs_data.find_all('node')
         for node in nodes:
             if node.get('id') == str(node_id):
                 lat = node.get('lat')
                 lon = node.get('lon')
-                return lat, lon
+                return float(lat), float(lon)
         raise ValueError('id ist nicht vergeben oder ist falsch')
 
     def get_Building_dicts(self):
@@ -58,13 +70,13 @@ class osm_parser():
         lst_node_ids = []
 
         res = []
-        for h in self.get_highway_dicts():
+        for h in self.get_Building_dicts():
             if h['id'] == str(building_id):
                 lst_node_ids = h['lst_references']
                 break
         for node_id in lst_node_ids:
             lat, lon = self.get_node_lat_lon(node_id)
-            res.append((lat, lon))
+            res.append((float(lat), float(lon)))
         return res
 
     def get_highway_dicts(self):
@@ -110,10 +122,12 @@ class osm_parser():
                 break
         for node_id in lst_node_ids:
             lat, lon = self.get_node_lat_lon(node_id)
-            res.append((lat, lon))
+            res.append((float(lat), float(lon)))
         return res
 
-p = osm_parser('data_gerlingen.osm')
-print(p.get_highway_nodes(24538510))
-dic = p.get_highway_dicts()
-print(p.get_highway_dicts())
+if __name__ == "__main__":
+    p = osm_parser('data_gerlingen.osm')
+    print(p.get_highway_nodes(24538510))
+    dic = p.get_highway_dicts()
+    print(p.get_highway_dicts())
+
