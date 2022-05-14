@@ -30,7 +30,7 @@ bg = pygame.image.load("img_gerlingen.png")
 
 while spielaktiv:
     # Überprüfen, ob Nutzer eine Aktion durchgeführt hat
-    spielaktiv = w.getDeleteEvent()
+    spielaktiv = w.makeEvents(0.000005)
 
     # Spiellogik hier integrieren
 
@@ -38,6 +38,7 @@ while spielaktiv:
     w.deleteWindow()
 
     # Spielfeld/figuren zeichnen
+
     #w.displayImage(bg)
     for highway in all_HigwaysObjects:
         w.drawHighway(highway, 4, (255, 140, 0))
