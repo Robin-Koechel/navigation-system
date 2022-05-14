@@ -33,6 +33,40 @@ class Highway():
     def get_Surface(self):
         return self.surface
 
+    def getXYCoordinate(self, zoom, width, heigth, referencePoint):
+        lst_coordinates = []
+
+        for point in self.nodes:
+           # is the point in the window
+           isThePointDrawable = True
+           differenceLon = point[1] - referencePoint[1]
+           differenceLat = point[0] - referencePoint[0]
+
+           if differenceLat < 0 or differenceLon < 0:
+               isThePointDrawable = False
+           amountOfLon = width / 100 * zoom
+           amountOfLat = heigth / 100 * zoom
+
+           if amountOfLat < differenceLat or amountOfLon < differenceLon:
+               isThePointDrawable = False
+
+           if isThePointDrawable:
+               # get x
+               xRatio = differenceLon / amountOfLon
+               xCoordinate = xRatio * width
+
+               # get y
+               yRatio = differenceLat / amountOfLat
+               yCoordinate = yRatio * heigth
+               lst_coordinates.append([xCoordinate, yCoordinate])
+
+
+
+
+
+        return lst_coordinates
+
+
     @staticmethod
     def get_DF_For_All_Highays(allHighways):
 
@@ -45,6 +79,8 @@ class Highway():
         columm_values = ['lat', 'lon']
         df = pd.DataFrame(data=lst_coordinates, columns=columm_values)
         return df
+
+
 
 
 if __name__ == "__main__":
@@ -70,6 +106,6 @@ if __name__ == "__main__":
     ax.set_xlim(BBox[0], BBox[1])
     ax.set_ylim(BBox[2], BBox[3])
     print(BBox)
-    ax.imshow(background_img, zorder=0, extent=BBox, aspect='equal')
+    #ax.imshow(background_img, zorder=0, extent=BBox, aspect='equal')
     plt.show()
 

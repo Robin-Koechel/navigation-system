@@ -1,11 +1,7 @@
-import numpy as np
 import pandas as pd
-import matplotlib.pyplot as plt
-import numpy as np
 from bs4 import BeautifulSoup as bs # parsing the data
 from matplotlib import pyplot as plt
-from matplotlib import image
-import math
+
 background_img  = plt.imread('img_gerlingen.png')
 
 with open('data_gerlingen.osm', 'r') as f:
@@ -27,14 +23,24 @@ max_lon = float(b_bound.get('maxlon'))
 for n in b_node:
     lat = float(n.get('lat'))
     lon = float(n.get('lon'))
+    changeset = float(n.get("changeset"))
+
+
     lst_coordinates.append([lat, lon])
 
 
-fig, ax = plt.subplots(figsize = (8,7))
+
+
+fig, ax = plt.subplots(figsize = (9,7))
 columm_values = ['lat', 'lon']
 df = pd.DataFrame(data = lst_coordinates, columns=columm_values)
+print(df)
 BBox = (min_lon,  max_lon,
          min_lat, max_lat)
+#print(BBox)
+
+
+
 ax.scatter(df.lon, df.lat, zorder=1, alpha= 0.65, c='r', s=10)
 ax.set_title('Plotting Spatial Data on Riyadh Map')
 ax.set_xlim(BBox[0],BBox[1])
