@@ -6,34 +6,48 @@ from bs4 import BeautifulSoup as bs # parsing the data
 from matplotlib import pyplot as plt
 from matplotlib import image
 import math
-from parse_osm_files import osm_parser#
+from parse_osm_files import osm_parser
 
 class Building():
     def __init__(self, building_Data, osm_parser):
         self.nodes = osm_parser.get_Building_nodes(building_Data['id'])
-        self.city = building_Data['addr:city']
-        self.country = building_Data['addr:country']
-        self.housenumber = building_Data['addr:housenumber']
-        self.postcode = building_Data['addr:postcode']
-        self.street = building_Data['addr:street']
+
 
     def get_All_Lat_Lon(self):
         return self.nodes
 
-    def get_City(self):
-        return self.city
+    def getXYCoordinate(self, zoomX,zoomY, width, heigth, referencePoint):
+        lst_coordinates = []
 
-    def get_Country(self):
-        return self.country
+        for point in self.nodes:
+           # is the point in the window
+           isThePointDrawable = True
+           differenceLon = point[1] - referencePoint[1]
+           differenceLat = point[0] - referencePoint[0]
 
-    def get_Housenumber(self):
-        return self.housenumber
+           if differenceLat < 0 or differenceLon < 0:
+               isThePointDrawable = False
+           amountOfLon = width / 100 * zoomX
+           amountOfLat = heigth / 100 * zoomY
 
-    def get_Postcode(self):
-        return self.postcode
+           if amountOfLat < differenceLat or amountOfLon < differenceLon:
+               isThePointDrawable = False
 
-    def get_Street(self):
-        return self.street
+           if isThePointDrawable:
+               # get x
+               xRatio = differenceLon / amountOfLon
+               xCoordinate = xRatio * width
+
+               # get y
+               yRatio = differenceLat / amountOfLat
+               yCoordinate = yRatio * heigth
+               lst_coordinates.append([xCoordinate, yCoordinate])
+
+
+
+
+
+        return lst_coordinates
 
     @staticmethod
     def get_DF_For_All_Buildings(allBuildings):

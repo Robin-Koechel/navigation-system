@@ -2,7 +2,7 @@ import pygame
 from parse_osm_files import osm_parser
 from Highway import Highway
 from Building import Building
-
+from House import House
 
 class Window():
     def __init__(self, width, heigth, zoomx, zoomY, fps):
@@ -23,12 +23,37 @@ class Window():
     def getReferencePoint(self):
         return self.referencePoint
 
+    def drawBuilding(self, building, radius, color):
+        xyCoordinate = building.getXYCoordinate(self.zoomX, self.zoomY, self.width, self.heigth, self.referencePoint)
+        latlon = building.get_All_Lat_Lon()
+        #font = pygame.font.Font('freesansbold.ttf', 10)
+        green = (0, 255, 0)
+        blue = (0, 0, 128)
+        # create a text surface object,
+        # on which text is drawn on it.
+        i = 0
+        lastpoint = []
+        for point in xyCoordinate:
+
+            point[1] = self.heigth - point[1]
+            pygame.draw.circle(self.screen, color, point, radius, 4)
+            #text = font.render(str(latlon[i]), True, green, blue)
+            #self.screen.blit(text, point)
+            #i = i + 1
+
+            if lastpoint != []:
+                pygame.draw.line(self.screen, green, lastpoint, point)
+
+            lastpoint = point
+
     def drawHighway(self, highway, radius ,color):
         xyCoordinate = highway.getXYCoordinate(self.zoomX,self.zoomY, self.width, self.heigth, self.referencePoint)
         latlon = highway.get_All_Lat_Lon()
         font = pygame.font.Font('freesansbold.ttf', 10)
         green = (0, 255, 0)
         blue = (0, 0, 128)
+        rot = (255, 0, 0)
+
         # create a text surface object,
         # on which text is drawn on it.
         i = 0
@@ -42,7 +67,7 @@ class Window():
             i = i + 1
 
             if lastpoint != []:
-                pygame.draw.line(self.screen, green, lastpoint, point)
+                pygame.draw.line(self.screen, rot, lastpoint, point)
 
             lastpoint = point
 
