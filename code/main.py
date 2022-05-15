@@ -15,23 +15,26 @@ for highway in all_Highways:
 #zoom
 amountOfLon = 1250/100
 differenceOfLon = BBox[1] - BBox[0]
-zoom1 = differenceOfLon/amountOfLon
+zoomX = differenceOfLon/amountOfLon
 
 amountOfLat = 738/100
 differenceOfLat = BBox[3] - BBox[2]
-zoom2 = differenceOfLat/amountOfLat
+zoomY = differenceOfLat/amountOfLat
 
 
 spielaktiv = True
-w = Window(1250,738,0.0005,60)
+zoom = 0.0005
+
+w = Window(1250,738,zoomX,zoomY,60)
 w.setReferencePoint((BBox[2],  BBox[0]))
 bg = pygame.image.load("img_gerlingen.png")
 
 
 while spielaktiv:
     # Überprüfen, ob Nutzer eine Aktion durchgeführt hat
-    spielaktiv = w.makeEvents(0.000005)
 
+    spielaktiv = w.makeEvents(0.000005)
+    w.refreshReferencepoint()
     # Spiellogik hier integrieren
 
     # Spielfeld löschen
@@ -39,7 +42,7 @@ while spielaktiv:
 
     # Spielfeld/figuren zeichnen
 
-    #w.displayImage(bg)
+    w.displayImage(bg)
     for highway in all_HigwaysObjects:
         w.drawHighway(highway, 4, (255, 140, 0))
 

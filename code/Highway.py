@@ -33,7 +33,7 @@ class Highway():
     def get_Surface(self):
         return self.surface
 
-    def getXYCoordinate(self, zoom, width, heigth, referencePoint):
+    def getXYCoordinate(self, zoomX,zoomY, width, heigth, referencePoint):
         lst_coordinates = []
 
         for point in self.nodes:
@@ -44,8 +44,8 @@ class Highway():
 
            if differenceLat < 0 or differenceLon < 0:
                isThePointDrawable = False
-           amountOfLon = width / 100 * zoom
-           amountOfLat = heigth / 100 * zoom
+           amountOfLon = width / 100 * zoomX
+           amountOfLat = heigth / 100 * zoomY
 
            if amountOfLat < differenceLat or amountOfLon < differenceLon:
                isThePointDrawable = False
@@ -106,6 +106,6 @@ if __name__ == "__main__":
     ax.set_xlim(BBox[0], BBox[1])
     ax.set_ylim(BBox[2], BBox[3])
     print(BBox)
-    #ax.imshow(background_img, zorder=0, extent=BBox, aspect='equal')
+    ax.imshow(background_img, zorder=0, extent=BBox, aspect='equal')
     plt.show()
 
