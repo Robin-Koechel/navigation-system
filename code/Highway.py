@@ -42,13 +42,13 @@ class Highway():
            differenceLon = point[1] - referencePoint[1]
            differenceLat = point[0] - referencePoint[0]
 
-           if differenceLat < 0 or differenceLon < 0:
-               isThePointDrawable = False
+           #if differenceLat < 0 or differenceLon < 0:
+               #isThePointDrawable = False
            amountOfLon = width / 100 * zoomX
            amountOfLat = heigth / 100 * zoomY
 
-           if amountOfLat < differenceLat or amountOfLon < differenceLon:
-               isThePointDrawable = False
+           #if amountOfLat < differenceLat or amountOfLon < differenceLon:
+               #isThePointDrawable = False
 
            if isThePointDrawable:
                # get x

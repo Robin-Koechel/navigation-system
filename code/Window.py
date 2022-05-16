@@ -62,8 +62,8 @@ class Window():
 
             point[1] = self.heigth - point[1]
             pygame.draw.circle(self.screen, color, point, radius, 4)
-            text = font.render(str(latlon[i]), True, green, blue)
-            self.screen.blit(text, point)
+            #text = font.render(str(latlon[i]), True, green, blue)
+            #self.screen.blit(text, point)
             i = i + 1
 
             if lastpoint != []:
