@@ -12,10 +12,10 @@ class Highway():
 
     def __init__(self, highway_Data, osm_parser):
         self.nodes = osm_parser.get_highway_nodes(highway_Data['id'])
-        self.lit = highway_Data['lit']
-        self.maxspeed = highway_Data['maxspeed']
-        self.name = highway_Data['name']
-        self.surface = highway_Data['surface']
+        #self.lit = highway_Data['lit']
+        #self.maxspeed = highway_Data['maxspeed']
+        #self.name = highway_Data['name']
+        #self.surface = highway_Data['surface']
 
     def get_All_Lat_Lon(self):
 

@@ -5,7 +5,7 @@ from Building import Building
 from Window import Window
 from House import House
 
-p = osm_parser('data_gerlingen.osm')
+p = osm_parser('stuttgart-mitte.osm')
 bg = pygame.image.load("img_gerlingen.png")
 
 BBox = p.get_Lat_Lon_Box()
