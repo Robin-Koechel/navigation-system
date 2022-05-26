@@ -4,7 +4,7 @@ class osm_parser():
 
     def __init__(self, file_path):
 
-        with open(file_path, 'r') as f:
+        with open(file_path, 'r', encoding="utf8") as f:
             self.data = f.read()
             self.bs_data = bs(self.data, 'xml')
 
@@ -126,8 +126,8 @@ class osm_parser():
         return res
 
 if __name__ == "__main__":
-    p = osm_parser('data_gerlingen.osm')
-    print(p.get_highway_nodes(24538510))
+    p = osm_parser('stuttgart-mitte.osm')
+    print(p.get_highway_nodes(592135167))
     dic = p.get_highway_dicts()
     print(p.get_highway_dicts())
 
