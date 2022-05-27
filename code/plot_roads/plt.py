@@ -35,7 +35,6 @@ for c in lst_coordinates:
     y_data.append(y)
     z_data.append(z)
 
-
 def plot_3d_sphere():
     ax = plt.axes(projection='3d')
     #ax.set_aspect("auto")

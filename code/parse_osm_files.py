@@ -23,8 +23,6 @@ class osm_parser():
                 min_lat, max_lat)
         return BBox
 
-
-
     def get_node_lat_lon(self, node_id):
         nodes = self.bs_data.find_all('node')
         for node in nodes:
