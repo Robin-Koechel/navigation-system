@@ -23,6 +23,13 @@ class osm_parser():
                 min_lat, max_lat)
         return BBox
 
+    def get_lst_node_ids(self):
+        lst_ids = []
+        nodes = self.bs_data.find_all('node')
+        for node in nodes:
+            lst_ids.append(node.get('id'))
+        return lst_ids
+
     def get_node_lat_lon(self, node_id):
         nodes = self.bs_data.find_all('node')
         for node in nodes:
@@ -31,6 +38,12 @@ class osm_parser():
                 lon = node.get('lon')
                 return float(lat), float(lon)
         raise ValueError('id ist nicht vergeben oder ist falsch')
+    def get_node_id_by_lat_lon(self, lat, lon):
+        nodes = self.bs_data.find_all('node')
+        for node in nodes:
+            if node.get('lat') == lat:
+                if node.get('lon') == lon:
+                    return node.get('id')
 
     def get_Building_dicts(self):
         st_Building_dicts = []
