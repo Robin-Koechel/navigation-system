@@ -5,7 +5,7 @@ from Building import Building
 from House import House
 
 class Window():
-    def __init__(self, width, heigth, zoomx, zoomY, fps):
+    def __init__(self, width, heigth, zoomx, zoomY, fps, parser):
         self.width = width
         self.heigth = heigth
         self.screen = pygame.display.set_mode((width, heigth))
@@ -16,7 +16,7 @@ class Window():
         self.fps = fps
         self.clock = pygame.time.Clock()
         pygame.init()
-
+        self.p = parser
     def setReferencePoint(self,referencePoint):
         self.referencePoint = referencePoint
 
@@ -56,15 +56,13 @@ class Window():
 
         # create a text surface object,
         # on which text is drawn on it.
-        i = 0
         lastpoint = []
-        for point in xyCoordinate:
+        for idx, point in enumerate(xyCoordinate):
 
             point[1] = self.heigth - point[1]
             pygame.draw.circle(self.screen, color, point, radius, 4)
-            #text = font.render(str(latlon[i]), True, green, blue)
-            #self.screen.blit(text, point)
-            i = i + 1
+            text = font.render(str(latlon[idx]), True, green, blue)
+            self.screen.blit(text, point)
 
             if lastpoint != []:
                 pygame.draw.line(self.screen, rot, lastpoint, point)

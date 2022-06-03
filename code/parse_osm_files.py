@@ -1,4 +1,5 @@
 from bs4 import BeautifulSoup as bs
+import math
 
 class osm_parser():
 
@@ -30,7 +31,7 @@ class osm_parser():
             lst_ids.append(node.get('id'))
         return lst_ids
 
-    def get_node_lat_lon(self, node_id):
+    def get_node_lat_lon_by_id(self, node_id):
         nodes = self.bs_data.find_all('node')
         for node in nodes:
             if node.get('id') == str(node_id):
@@ -38,12 +39,32 @@ class osm_parser():
                 lon = node.get('lon')
                 return float(lat), float(lon)
         raise ValueError('id ist nicht vergeben oder ist falsch')
+
     def get_node_id_by_lat_lon(self, lat, lon):
         nodes = self.bs_data.find_all('node')
         for node in nodes:
             if node.get('lat') == lat:
                 if node.get('lon') == lon:
                     return node.get('id')
+    def get_nodes_nearest_neighbour(self, node_id, number_of_neighbours):
+        lat, lon = self.get_node_lat_lon_by_id(node_id)
+        lst_nodes = self.get_lst_node_ids()
+
+        node_id_distance = {}
+        lst_neighbour_nodes_ids = []
+        for node_id in lst_nodes:
+            n_lat, n_lon = self.get_node_lat_lon_by_id(node_id)
+            v_s_x = (lat - n_lat, lon - n_lon)
+            amount_v_s_x = math.sqrt(v_s_x[0] ** 2 + v_s_x[1] ** 2)
+            if amount_v_s_x != 0:
+                node_id_distance.update({node_id:amount_v_s_x})
+        {k: v for k, v in sorted(node_id_distance.items(), key=lambda item: item[1])} # sort dict
+        for k in node_id_distance:
+            if len(lst_neighbour_nodes_ids) < number_of_neighbours:
+                lst_neighbour_nodes_ids.append(k)
+            else:
+                break
+        return lst_neighbour_nodes_ids
 
     def get_Building_dicts(self):
         st_Building_dicts = []
@@ -86,7 +107,7 @@ class osm_parser():
                 lst_node_ids = h['lst_references']
                 break
         for node_id in lst_node_ids:
-            lat, lon = self.get_node_lat_lon(node_id)
+            lat, lon = self.get_node_lat_lon_by_id(node_id)
             res.append((float(lat), float(lon)))
         return res
 
@@ -132,13 +153,16 @@ class osm_parser():
                 lst_node_ids = h['lst_references']
                 break
         for node_id in lst_node_ids:
-            lat, lon = self.get_node_lat_lon(node_id)
+            lat, lon = self.get_node_lat_lon_by_id(node_id)
             res.append((float(lat), float(lon)))
         return res
 
 if __name__ == "__main__":
-    p = osm_parser('stuttgart-mitte.osm')
-    print(p.get_highway_nodes(592135167))
-    dic = p.get_highway_dicts()
-    print(p.get_highway_dicts())
-
+    p = osm_parser('data_gerlingen.osm')
+    #print(p.get_highway_nodes(592135167))
+    #dic = p.get_highway_dicts()
+    #print(p.get_highway_dicts())
+    nnn = p.get_nodes_nearest_neighbour(1064727488, 5)
+    print(p.get_node_lat_lon_by_id(1064727488),"\n")
+    for n in nnn:
+        print(p.get_node_lat_lon_by_id(n))

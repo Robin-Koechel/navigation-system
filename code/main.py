@@ -5,7 +5,7 @@ from Building import Building
 from Window import Window
 from House import House
 
-p = osm_parser('stuttgart-mitte.osm')
+p = osm_parser('data_gerlingen.osm')
 bg = pygame.image.load("img_gerlingen.png")
 
 BBox = p.get_Lat_Lon_Box()
@@ -36,7 +36,7 @@ zoomY = differenceOfLat/amountOfLat
 
 spielaktiv = True
 
-w = Window(1250,738,zoomX,zoomY,60)
+w = Window(1250,738,zoomX,zoomY,60, p)
 w.setReferencePoint((BBox[2],  BBox[0]))
 
 
@@ -66,5 +66,3 @@ while spielaktiv:
     w.tick()
 
 pygame.quit()
-
-print("hello there")

@@ -1,12 +1,13 @@
 import math
+from tqdm import tqdm
 from parse_osm_files import osm_parser
 parser = osm_parser('data_gerlingen.osm')
 node_pointers = {} #ids
 open_lst = []
 closed_lst = []
 
-start_point = parser.get_node_lat_lon(1169039074) # lat, lon
-goal_point = parser.get_node_lat_lon(1169040511) # lat, lon
+start_point = parser.get_node_lat_lon_by_id(1169039074) # lat, lon
+goal_point = parser.get_node_lat_lon_by_id(1169040511) # lat, lon
 
 open_lst.append(start_point)
 
@@ -23,7 +24,7 @@ def expand_node(lat, lon):
 
     lst_nodes = parser.get_lst_node_ids()
     for node_id in lst_nodes:
-        n_lat, n_lon = parser.get_node_lat_lon(node_id)
+        n_lat, n_lon = parser.get_node_lat_lon_by_id(node_id)
         v_s_x = (lat - n_lat, lon - n_lon)
         amount_v_s_x = math.sqrt(v_s_x[0]**2 + v_s_x[1]**2)
 
@@ -41,7 +42,7 @@ def expand_node(lat, lon):
             lst_closest_nodes_ids[len(lst_dists) - 4] = node_id
 
     for node_id in lst_closest_nodes_ids:
-        cords = (parser.get_node_lat_lon(node_id))
+        cords = (parser.get_node_lat_lon_by_id(node_id))
         in_closed_list = False
         for c in closed_lst:
             if cords == c:
@@ -60,6 +61,7 @@ while len(open_lst) > 0:
             current_node = p
             open_lst.remove(p)
     closed_lst.append(current_node)
+    print(current_node)
     if current_node == goal_point:
         print("goal found")
 
