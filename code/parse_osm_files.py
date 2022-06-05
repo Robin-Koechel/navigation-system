@@ -46,25 +46,66 @@ class osm_parser():
             if node.get('lat') == lat:
                 if node.get('lon') == lon:
                     return node.get('id')
-    def get_nodes_nearest_neighbour(self, node_id, number_of_neighbours):
-        lat, lon = self.get_node_lat_lon_by_id(node_id)
-        lst_nodes = self.get_lst_node_ids()
+
+    def get_nodes_neighbours(self, node_id):
+        lst_highway_dics = self.get_highway_dicts()
+        lst_neighbours = []
+        for highway in lst_highway_dics:
+            nodes = highway.get('lst_references')
+            for idx, node in enumerate(nodes):
+                if int(node) == node_id:
+                    try:
+                        lst_neighbours.append(nodes[idx-1])
+                    except:
+                        pass
+                    try:
+                        lst_neighbours.append(nodes[idx+1])
+                    except:
+                        pass
+        lst_neighbours = list(dict.fromkeys(lst_neighbours))
+        return lst_neighbours
+
+
+    def get_nodes_nearest_neighbour(self, node_id, number_of_neighbours):# but only highways
+        lat1, lon1 = self.get_node_lat_lon_by_id(node_id)
+        lst_nodes = []
+
+        for highway in p.get_highway_dicts():
+            for n in highway.get('lst_references'):
+                lst_nodes.append(n)
+        list(dict.fromkeys(lst_nodes)) # remove dublicates
 
         node_id_distance = {}
         lst_neighbour_nodes_ids = []
-        for node_id in lst_nodes:
-            n_lat, n_lon = self.get_node_lat_lon_by_id(node_id)
-            v_s_x = (lat - n_lat, lon - n_lon)
-            amount_v_s_x = math.sqrt(v_s_x[0] ** 2 + v_s_x[1] ** 2)
-            if amount_v_s_x != 0:
-                node_id_distance.update({node_id:amount_v_s_x})
-        {k: v for k, v in sorted(node_id_distance.items(), key=lambda item: item[1])} # sort dict
+        for node in lst_nodes: # node = node id
+            lat2, lon2 = self.get_node_lat_lon_by_id(node)
+            distance = self.get_distance_lat_lon_in_km(lat1, lon1, lat2, lon2)
+            if distance != 0:
+                node_id_distance.update({node:distance})
+        node_id_distance = {k: v for k, v in sorted(node_id_distance.items(), key=lambda item: item[1])} # sort dict
+        print(node_id_distance)
         for k in node_id_distance:
             if len(lst_neighbour_nodes_ids) < number_of_neighbours:
                 lst_neighbour_nodes_ids.append(k)
             else:
                 break
         return lst_neighbour_nodes_ids
+
+    def get_distance_lat_lon_in_km(self, lat1, lon1, lat2, lon2):
+        # https://www.movable-type.co.uk/scripts/latlong.html
+        radius = 6371 #radius of earth
+        delta_lat = self.degree_to_rad(lat2-lat1)
+        delta_lon = self.degree_to_rad(lon2 - lon1)
+
+        a = math.sin(delta_lat/2) * math.sin(delta_lat/2)+\
+            math.cos(self.degree_to_rad(lat1)) * math.cos(self.degree_to_rad(lat2))*\
+            math.sin(delta_lon/2) * math.sin(delta_lon/2)
+
+        c = 2 *math.atan2(math.sqrt(a), math.sqrt(1-a))
+        d = radius * c # in km
+        return d
+    def degree_to_rad(self,deg):
+        return deg * math.pi/180
 
     def get_Building_dicts(self):
         st_Building_dicts = []
@@ -162,7 +203,7 @@ if __name__ == "__main__":
     #print(p.get_highway_nodes(592135167))
     #dic = p.get_highway_dicts()
     #print(p.get_highway_dicts())
-    nnn = p.get_nodes_nearest_neighbour(1064727488, 5)
-    print(p.get_node_lat_lon_by_id(1064727488),"\n")
+    nnn = p.get_nodes_neighbours(152292474)
+    print(p.get_node_lat_lon_by_id(152292474), "\n")
     for n in nnn:
         print(p.get_node_lat_lon_by_id(n))
